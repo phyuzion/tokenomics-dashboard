@@ -10,8 +10,8 @@ import {
   Page,
   ExcelExport,
   PdfExport,
-  Edit,
   Inject,
+  Toolbar,
 } from "@syncfusion/ej2-react-grids";
 
 import { transactionsData, transactionsGrid } from "../data/dummy";
@@ -26,6 +26,7 @@ const Transactions = () => {
         dataSource={transactionsData}
         allowPaging={true}
         allowSorting={true}
+        toolbar={['Search']}
       >
         <ColumnsDirective>
           {transactionsGrid.map((item, index) => (
@@ -39,8 +40,8 @@ const Transactions = () => {
             ContextMenu,
             Filter,
             Page,
+            Toolbar,
             ExcelExport,
-            Edit,
             PdfExport,
           ]}
         />
