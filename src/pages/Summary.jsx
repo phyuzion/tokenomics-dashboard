@@ -1,11 +1,10 @@
 import React from 'react';
 import { GoDotFill } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
 import SemiPieChart from '../components/Charts/SemiPieChart'
-import { Stacked, Pie, Button, LineChart, SparkLine, Footer } from '../components';
-import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, SparklineAreaDataExpense, ecomPieChartData, activityPosts } from '../data/dummy';
+import { Stacked, Button,  SparkLine, Footer } from '../components';
+import { earningData, SparklineAreaData, SparklineAreaDataExpense, activityPosts } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 
