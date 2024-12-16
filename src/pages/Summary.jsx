@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoPrimitiveDot } from 'react-icons/go';
+import { GoDotFill } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
@@ -69,13 +69,13 @@ const Summary = () => {
             <div className="flex items-center gap-4">
               <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                 <span>
-                  <GoPrimitiveDot />
+                  <GoDotFill />
                 </span>
                 <span>Buy</span>
               </p>
               <p className="flex items-center gap-2 stacked-budget-color hover:drop-shadow-xl">
                 <span>
-                  <GoPrimitiveDot />
+                  <GoDotFill />
                 </span>
                 <span>Sell</span>
               </p>
