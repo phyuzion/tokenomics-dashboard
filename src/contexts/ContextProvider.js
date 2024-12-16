@@ -1,5 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
-import { loadProgram } from "../utils/SolanaLoader";
+import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
 
@@ -11,55 +10,26 @@ const initialState = {
 };
 
 export const ContextProvider = ({ children }) => {
-  // UI 상태
   const [screenSize, setScreenSize] = useState(undefined);
-  const [currentColor, setCurrentColor] = useState("#03C9D7");
-  const [currentMode, setCurrentMode] = useState("Light");
+  const [currentColor, setCurrentColor] = useState('#03C9D7');
+  const [currentMode, setCurrentMode] = useState('Light');
   const [themeSettings, setThemeSettings] = useState(false);
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
 
-  // Solana 상태
-  const [wallet, setWallet] = useState(null);
-  const [program, setProgram] = useState(null);
-
   const setMode = (e) => {
     setCurrentMode(e.target.value);
-    setThemeSettings((prev) => !prev);
-    localStorage.setItem("themeMode", e.target.value);
+    setThemeSettings(prev => !prev)
+    localStorage.setItem('themeMode', e.target.value);
   };
 
   const setColor = (color) => {
     setCurrentColor(color);
-    setThemeSettings((prev) => !prev);
-    localStorage.setItem("colorMode", color);
+    setThemeSettings(prev => !prev)
+    localStorage.setItem('colorMode', color);
   };
 
-  const handleClick = (clicked) =>
-    setIsClicked({ ...initialState, [clicked]: true });
-
-  // 지갑 연결
-  const connectWallet = async (walletAdapter) => {
-    try {
-      await walletAdapter.connect();
-      const anchorProgram = await loadProgram(walletAdapter);
-      setWallet(walletAdapter);
-      setProgram(anchorProgram);
-      console.log("Wallet connected:", walletAdapter.publicKey.toString());
-    } catch (error) {
-      console.error("Failed to connect wallet:", error);
-    }
-  };
-
-  // 지갑 해제
-  const disconnectWallet = async () => {
-    if (wallet) {
-      await wallet.disconnect();
-      setWallet(null);
-      setProgram(null);
-      console.log("Wallet disconnected.");
-    }
-  };
+  const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
 
   return (
     <StateContext.Provider
@@ -79,11 +49,7 @@ export const ContextProvider = ({ children }) => {
         setMode,
         setColor,
         themeSettings,
-        setThemeSettings,
-        wallet,
-        connectWallet,
-        disconnectWallet,
-        program,
+        setThemeSettings
       }}
     >
       {children}
