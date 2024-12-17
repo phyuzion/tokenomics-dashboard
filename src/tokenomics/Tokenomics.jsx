@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Navbar, Sidebar } from './components';
-import { routes } from './RoutesConfig';
+import { Navbar, Sidebar } from './components/index.jsx';
+import { routes } from './RoutesConfig.js';
 import { ContextProvider, useStateContext } from './contexts/ContextProvider.js';
-import './Admin.css';
+import './Tokenomics.css';
 
-const AdminContent = () => {
+const TokenomicsContent = () => {
   const { activeMenu } = useStateContext();
   const [menuInitialized, setMenuInitialized] = useState(false);
 
@@ -38,7 +38,7 @@ const AdminContent = () => {
         <Navbar />
         <Routes>
           {/* Default Redirect */}
-          <Route path="/" element={<Navigate to="/summary" />} />
+          <Route path="/" element={<Navigate to="/tokenomics/summary" />} />
           {/* Dynamic Routes */}
           {routes.map((category) =>
             category.links.map((route, index) => (
@@ -51,12 +51,12 @@ const AdminContent = () => {
   );
 };
 
-const Admin = () => {
+const Tokenomics = () => {
   return (
     <ContextProvider>
-      <AdminContent /> {/* ContextProvider 내부에서 실제 렌더링 */}
+      <TokenomicsContent />
     </ContextProvider>
   );
 };
 
-export default Admin;
+export default Tokenomics;

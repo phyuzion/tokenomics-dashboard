@@ -41,7 +41,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern':
-          "url('./admin/data/welcome-bg.svg')",
+          "url('./tokenomics/data/welcome-bg.svg')",
       },
     },
   },

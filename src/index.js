@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import App from './App.js';
-import { ContextProvider } from './admin/contexts/ContextProvider';
+import { ContextProvider } from './tokenomics/contexts/ContextProvider.js';
 
 
 ReactDOM.render(
