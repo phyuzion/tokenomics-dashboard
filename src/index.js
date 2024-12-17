@@ -3,15 +3,12 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import App from './App.js';
-import { ContextProvider } from './contexts/ContextProvider';
-import { Buffer } from 'buffer';
-window.Buffer = Buffer;
+import { ContextProvider } from './admin/contexts/ContextProvider';
+
 
 ReactDOM.render(
   <>
-    <ContextProvider>
-      <App />
-    </ContextProvider>
+    <App />
   </>,
   document.getElementById('root'),
 );

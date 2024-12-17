@@ -11,10 +11,10 @@ import { BsKanban } from 'react-icons/bs';
 import { FiEdit } from 'react-icons/fi';
 
 const wallets = [
-  { path: "/walletA", name: "walletA", title: "Wallet A Scanner", address: "0x123...A", icon: <IoMdContacts /> },
-  { path: "/walletB", name: "walletB", title: "Wallet B Scanner", address: "0x123...B", icon: <IoMdContacts /> },
-  { path: "/walletC", name: "walletC", title: "Wallet C Scanner", address: "0x123...C", icon: <IoMdContacts /> },
-  { path: "/walletD", name: "walletD", title: "Wallet D Scanner", address: "0x123...D", icon: <IoMdContacts /> },
+  { path: "walletA", name: "walletA", title: "Wallet A Scanner", address: "0x123...A", icon: <IoMdContacts /> },
+  { path: "walletB", name: "walletB", title: "Wallet B Scanner", address: "0x123...B", icon: <IoMdContacts /> },
+  { path: "walletC", name: "walletC", title: "Wallet C Scanner", address: "0x123...C", icon: <IoMdContacts /> },
+  { path: "walletD", name: "walletD", title: "Wallet D Scanner", address: "0x123...D", icon: <IoMdContacts /> },
 ];
 
 export const routes = [
@@ -22,7 +22,7 @@ export const routes = [
     category: "Dashboard",
     links: [
       {
-        path: "/summary",
+        path: "summary",
         name: "summary",
         component: <Summary />,
         icon: <FiShoppingBag />,
@@ -33,19 +33,19 @@ export const routes = [
     category: "Category",
     links: [
       {
-        path: "/transactions",
+        path: "transactions",
         name: "transactions",
         component: <Transactions />,
         icon: <AiOutlineShoppingCart />,
       },
       {
-        path: "/holders",
+        path: "holders",
         name: "holders",
         component: <Holders />,
         icon: <RiContactsLine />,
       },
       {
-        path: "/contents",
+        path: "contents",
         name: "contents",
         component: <Contents />,
         icon: <RiContactsLine />,
@@ -62,19 +62,19 @@ export const routes = [
     category: "Apps",
     links: [
       {
-        path: "/calendar",
+        path: "calendar",
         name: "calendar",
         component: <Calendar />,
         icon: <AiOutlineCalendar />,
       },
       {
-        path: "/kanban",
+        path: "kanban",
         name: "kanban",
         component: <Kanban />,
         icon: <BsKanban />,
       },
       {
-        path: "/editor",
+        path: "editor",
         name: "editor",
         component: <Editor />,
         icon: <FiEdit />,

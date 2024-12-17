@@ -41,7 +41,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern':
-          "url('./data/welcome-bg.svg')",
+          "url('./admin/data/welcome-bg.svg')",
       },
     },
   },
